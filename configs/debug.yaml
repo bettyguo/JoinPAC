@@ -1,0 +1,34 @@
+# Fast debug configuration
+benchmark:
+  name: job
+  data_dir: benchmarks/data
+  num_tables: 21
+  num_queries: 10
+  scale_factor: 1
+
+model:
+  architecture: mscn
+  num_layers: 3
+  hidden_dim: 64
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 5
+  dropout: 0.1
+
+experiment:
+  num_runs: 1
+  warmup_runs: 0
+  seed: 42
+  confidence_threshold: 0.3
+  drift_threshold: 0.45
+  calibration_constant: 2.3
+  reporting: "single run"
+
+hybrid:
+  confidence_threshold: 0.3
+  sigma_multiplier: 1.0
+  it_bound_type: safebound
+  fallback_strategy: geometric_mean
+
+output_dir: results/debug
+log_level: DEBUG

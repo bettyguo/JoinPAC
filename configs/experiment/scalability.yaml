@@ -1,0 +1,17 @@
+# Scalability experiment configuration
+experiment_name: scalability
+description: TPC-DS scalability across scale factors
+
+benchmark:
+  name: tpc-ds
+  scale_factors: [1, 10, 100]
+
+architectures:
+  - mscn
+  - neurocard
+
+evaluation:
+  metrics:
+    - median_q_error
+    - training_time_hours
+  num_runs: 5

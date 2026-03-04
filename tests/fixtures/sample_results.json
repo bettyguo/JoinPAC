@@ -1,0 +1,7 @@
+{
+  "experiment": "test",
+  "results": {
+    "mscn": {"median_q_error": 2.1, "p99_q_error": 182},
+    "neurocard": {"median_q_error": 1.8, "p99_q_error": 156}
+  }
+}

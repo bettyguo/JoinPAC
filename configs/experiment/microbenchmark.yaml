@@ -1,0 +1,22 @@
+# Microbenchmark configuration
+experiment_name: microbenchmark
+description: Low-level performance measurements
+
+benchmarks:
+  spectral_norm_computation:
+    description: Time to compute spectral norm product
+    architectures: [mscn, neurocard, deepdb, flat]
+    power_iterations: [5, 10, 20]
+
+  confidence_computation:
+    description: Per-query confidence computation latency
+    num_queries: [100, 1000, 10000]
+    encoding_dims: [64, 128, 256]
+
+  drift_detection:
+    description: Drift detection end-to-end latency
+    workload_sizes: [100, 500, 1000, 5000]
+
+  hybrid_overhead:
+    description: Per-query overhead of hybrid estimation
+    num_queries: 1000

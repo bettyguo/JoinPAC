@@ -1,0 +1,9 @@
+workload:
+  name: test_workload
+  queries:
+    - id: 1
+      tables: [title, movie_info]
+      num_joins: 1
+    - id: 2
+      tables: [title, keyword]
+      num_joins: 1

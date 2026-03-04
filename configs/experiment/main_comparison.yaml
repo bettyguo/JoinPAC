@@ -1,0 +1,30 @@
+# Main comparison experiment
+experiment_name: main_comparison
+description: Cross-benchmark prediction and hybrid estimation comparison
+
+benchmark:
+  name: job
+  num_queries: 113
+
+architectures:
+  - mscn
+  - neurocard
+  - deepdb
+  - flat
+
+baselines:
+  - postgresql
+  - safebound
+  - cardood
+  - ensemble_5x
+  - mc_dropout
+
+evaluation:
+  cross_benchmark_target: stats-ceb
+  metrics:
+    - median_q_error
+    - p99_q_error
+    - ood_median_q_error
+    - ood_p99_q_error
+  num_runs: 5
+  warmup_runs: 3

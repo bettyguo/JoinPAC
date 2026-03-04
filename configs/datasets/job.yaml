@@ -1,0 +1,12 @@
+# JOB (Join Order Benchmark) dataset configuration
+name: job
+full_name: Join Order Benchmark
+source: https://github.com/gregrahn/join-order-benchmark
+num_tables: 21
+num_queries: 113
+characteristics:
+  attr_disjoint_pct: 89.0
+  min_selectivity_coverage: 97.3
+  correlation_beta: 0.08
+  beta_std: 0.02
+  max_degree: 4218

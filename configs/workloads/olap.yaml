@@ -1,0 +1,7 @@
+# OLAP workload configuration
+workload_type: olap
+description: Complex analytical queries with many joins
+max_joins: 16
+max_predicates: 8
+selectivity_range: [0.0001, 0.5]
+query_rate: 10

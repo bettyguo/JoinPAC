@@ -1,0 +1,7 @@
+# OLTP workload configuration
+workload_type: oltp
+description: Short-running point queries and simple joins
+max_joins: 4
+max_predicates: 3
+selectivity_range: [0.001, 0.1]
+query_rate: 1000

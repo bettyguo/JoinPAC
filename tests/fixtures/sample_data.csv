@@ -1,0 +1,6 @@
+query_id,tables,num_joins,true_cardinality,estimated_cardinality
+1,title;movie_info,1,1523,1600
+2,title;keyword,1,8742,8500
+3,title;movie_info;keyword,2,4521,4800
+4,title;cast_info,1,12453,11000
+5,title;movie_info;cast_info,2,28764,30000

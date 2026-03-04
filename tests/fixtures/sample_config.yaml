@@ -1,0 +1,6 @@
+benchmark:
+  name: job
+  num_queries: 10
+experiment:
+  seed: 42
+  num_runs: 1

@@ -1,0 +1,41 @@
+# Ablation study configuration
+experiment_name: ablation
+description: Component ablation for hybrid estimator
+
+benchmark:
+  name: job
+
+configurations:
+  - name: full_hybrid
+    confidence: true
+    it_fallback: true
+    geometric_mean: true
+  - name: no_confidence_always_learned
+    confidence: false
+    it_fallback: false
+    geometric_mean: false
+  - name: no_confidence_always_it
+    confidence: false
+    it_fallback: true
+    geometric_mean: false
+  - name: uniform_threshold
+    confidence: true
+    it_fallback: true
+    geometric_mean: true
+    uniform: true
+  - name: arithmetic_mean
+    confidence: true
+    it_fallback: true
+    geometric_mean: false
+  - name: pure_it_fallback
+    confidence: true
+    it_fallback: true
+    geometric_mean: false
+    pure_it: true
+
+evaluation:
+  metrics:
+    - median_q_error
+    - p99_q_error
+    - ood_p99_q_error
+  num_runs: 5

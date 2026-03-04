@@ -1,0 +1,7 @@
+# Mixed workload configuration
+workload_type: mixed
+description: Mixed OLTP/OLAP workload
+oltp_fraction: 0.7
+olap_fraction: 0.3
+max_joins: 10
+max_predicates: 5

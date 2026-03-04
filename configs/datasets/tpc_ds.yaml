@@ -1,0 +1,11 @@
+# TPC-DS dataset configuration
+name: tpc-ds
+full_name: TPC-DS Decision Support Benchmark
+source: https://www.tpc.org/tpcds/
+num_templates: 99
+scale_factors: [1, 10, 100]
+characteristics:
+  min_selectivity_coverage: 98.8
+  correlation_beta: 0.11
+  beta_std: 0.03
+  max_degree: 8924

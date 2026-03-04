@@ -1,0 +1,12 @@
+# STATS-CEB dataset configuration
+name: stats-ceb
+full_name: STATS Cardinality Estimation Benchmark
+source: https://github.com/Nathaniel-Han/End-to-End-CardEst-Benchmark
+num_tables: 8
+num_queries: 146
+characteristics:
+  attr_disjoint_pct: 94.0
+  min_selectivity_coverage: 98.1
+  correlation_beta: 0.05
+  beta_std: 0.01
+  max_degree: 2847
